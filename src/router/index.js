@@ -6,6 +6,9 @@ import VueRouter from 'vue-router'
 import Login from '../pages/login.vue'
 // 导入注册页面
 import Register from '../pages/Register.vue'
+//
+// import Profile from '../pages/Profile.vue'
+
 // 使用插件router
 Vue.use(VueRouter)
 // 配置路由规则

@@ -1,5 +1,7 @@
 <template>
-<div>注册</div>
+<div>
+  <hm-button><slot></slot></hm-button>
+</div>
 </template>
 
 <script>

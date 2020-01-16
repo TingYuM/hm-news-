@@ -1,6 +1,6 @@
 <template>
  <div class="input_box">
-   <input :type="type" class="auth-input" :class="[status]" :placeholder="placeholder" :value="value" @input="handleInput">
+   <input :type="type" class="hm-input" :class="[status]" :placeholder="placeholder" :value="value" @input="handleInput">
    <span class="tips" v-show="showTips">{{errMsg}}</span>
  </div>
 </template>
@@ -10,6 +10,7 @@ export default {
   // 记录效验是否成功
   data () {
     return {
+      // 记录校验是否成功
       status: ''
     }
   },
@@ -62,7 +63,7 @@ export default {
 .input_box{
   padding-bottom: 15px;
   position: relative;
-  .auth-input{
+  .hm-input{
     width: 100%;
     height: 38px;
     background-color: transparent;
