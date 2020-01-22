@@ -14,7 +14,7 @@ Vue.use(VueRouter)
 // 配置路由规则
 const router = new VueRouter({
   routes: [
-    { path: '/', redirect: '/login' },
+    { path: '/', redirect: '/login', name: 'login' },
     { path: '/login', component: Login },
     { path: '/register', component: Register }
   ]

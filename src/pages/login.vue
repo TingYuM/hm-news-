@@ -1,6 +1,6 @@
 <template>
 <div class="login">
-  <div class="close">
+  <div class="close" @click="$router.go(-1)">
     <i class="iconfont iconicon-test"></i>
   </div>
   <div class="logo">
@@ -19,6 +19,9 @@
     <!-- 使用vant-ui组件库 yarn add vant 全局的所有组件库插件 yarn add babel-plugin-import根据需求安装具体插件 看文档导入-->
     <!-- <van-button type="warning">警告按钮</van-button> -->
   </div>
+  <div class="go-register">
+    立即<router-link to="/register">注册</router-link>
+  </div>
 </div>
 </template>
 
@@ -32,12 +35,12 @@ export default {
       password: ''
     }
   },
-  // created () {
-  //   // console.log(this.$route)
-  //   const { username, password } = this.$route.params
-  //   this.username = username
-  //   this.password = password
-  // },
+  created () {
+    console.log(this.$route)
+    // const { username, password } = this.$route.params
+    // this.username = username
+    // this.password = password
+  },
 
   methods: {
     async login () {
@@ -49,6 +52,7 @@ export default {
         username: this.username,
         password: this.password
       })
+      console.log(res)
       if (res.data.statusCode === 401) {
         this.$toast.fail('用户名或者密码错误')
       } else {
@@ -80,6 +84,13 @@ export default {
   }
   .btn {
     margin-top: 20px;
+  }
+  .go-register {
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    font-size: 18px;
+    margin-top: 10px;
   }
 }
 </style>

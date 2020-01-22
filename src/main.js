@@ -29,6 +29,7 @@ Vue.use(Toast)
 Vue.component('hm-button', HmButton)
 Vue.component('hm-input', HmInput)
 Vue.prototype.$axios = axios
+axios.defaults.baseURL = 'http://localhost:3000'
 
 Vue.config.productionTip = false
 
