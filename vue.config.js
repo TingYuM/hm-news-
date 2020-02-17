@@ -1,10 +1,9 @@
-// 每次修改完配置文件 都需再重启项目
-// 配浏览器自动打开
+// 配浏览器自动打开（每次修改完配置文件 都需再重启项目）
 module.exports = {
   devServer: {
     open: true
   },
-  // 先安装yarn add postcss-px2rem 再配置rem
+  // 先终端下载yarn add postcss-px2rem 再配置rem
   css: {
     loaderOptions: {
       css: {},
