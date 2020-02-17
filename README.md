@@ -1,4 +1,4 @@
-# hm-news
+# my-news
 
 ## Project setup
 ```
